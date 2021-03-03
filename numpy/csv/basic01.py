@@ -12,8 +12,8 @@ with open(input_file, 'r', newline='') as filereader:
         header = filereader.readline()
         header = header.strip()
         header_list = header.split(',') # list (not array)
+        print(','.join(map(str, header_list)))
         print(header_list)
-        #print(','.join(map(str, header_list)))
         filewriter.write(','.join(map(str, header_list))+'\n') # header writer...
         for row in filereader:
             row = row.strip()
